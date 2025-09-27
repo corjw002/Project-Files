@@ -20,38 +20,50 @@ def choose_word(my_list):
 def display_word(random_pokemon, guessed_letters):
     turn = 0
     random_pokemon = random_pokemon.lower()
-    rand_poke_list = []
+    rand_poke_list = list(random_pokemon)
+    display_answer = []
+    current_state = (len(random_pokemon) * "_")
+    print(current_state)
+    print(random_pokemon)
 
-    for letter in random_pokemon:
-        rand_poke_list.append(letter)
 
-    poke_str = "".join(rand_poke_list)
-
-    answer = [len(rand_poke_list) * "_"]
-    answer_str = "".join(answer)
-
-    index = 0
-
-    while index < len(rand_poke_list):
-
+    while current_state != random_pokemon:
         guess = input("Guess a letter: ")
         guessed_letters.append(guess)
+        index = 0
 
-        for letter in rand_poke_list:
-            if guess == rand_poke_list[index]:
-                answer[index].replace(answer[index], guess)
+        while index < len(random_pokemon):
 
-        print(answer)
-        index += 1
+            if guess == random_pokemon[index]:
+                current_state = current_state.replace(random_pokemon[index], guess)
 
-    print(rand_poke_list)
+            index += 1
+            print(current_state)
+            print(display_answer)
+
+
+    """
+            display_answer_str = "".join(display_answer)
+
+        if current_state != display_answer_str:
+            current_state = display_answer_str
+    """
+
+
+
+
+
 
 
 def main():
     pokemon_list = read_file("pokemon.txt")
     random_pokemon = choose_word(pokemon_list)
+
     guessed_letters = []
     display_word(random_pokemon, guessed_letters)
+
+
+
 
 
 main()
