@@ -32,14 +32,19 @@ def display_word(random_pokemon, guessed_letters):
         guessed_letters.append(guess)
         index = 0
 
+        current_state_list = list(current_state)
+
         while index < len(random_pokemon):
 
             if guess == random_pokemon[index]:
-                current_state = current_state.replace(random_pokemon[index], guess)
+                current_state_list[index] = guess
 
             index += 1
-            print(current_state)
-            print(display_answer)
+        current_state = "".join(current_state_list)
+        print(current_state)
+
+    print("Well done, you guessed the Pokemon!")
+
 
 
     """
