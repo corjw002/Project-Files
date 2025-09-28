@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecb1e7e1-8590-49cc-a870-8d66b1bcd089" name="Changes" comment="Working inside the &quot;display_word&quot; function but I need to pull it out and streamline the main function better.">
+    <list default="true" id="ecb1e7e1-8590-49cc-a870-8d66b1bcd089" name="Changes" comment="Updated the code so it works and made the user display easy to read">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pokemon.py" beforeDir="false" afterPath="$PROJECT_DIR$/pokemon.py" afterDir="false" />
     </list>
@@ -99,13 +99,22 @@
       <option name="project" value="LOCAL" />
       <updated>1759013582055</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Updated the code so it works and made the user display easy to read">
+      <option name="closed" value="true" />
+      <created>1759016644747</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1759016644747</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Re aligning my project to git repository for ease of use.  Progress so far" />
     <MESSAGE value="Attempting to use string.replace method to update the guess list.  Not working currently" />
     <MESSAGE value="Working inside the &quot;display_word&quot; function but I need to pull it out and streamline the main function better." />
-    <option name="LAST_COMMIT_MESSAGE" value="Working inside the &quot;display_word&quot; function but I need to pull it out and streamline the main function better." />
+    <MESSAGE value="Updated the code so it works and made the user display easy to read" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated the code so it works and made the user display easy to read" />
   </component>
 </project>

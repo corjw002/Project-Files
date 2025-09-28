@@ -1,22 +1,25 @@
 import random
 
-
+# Define a function to open the pokemon.txt file.
 def read_file(filename):
     infile = open("pokemon.txt", "r")
 
+    # Read the file and assign it to a variable.
     pokemon_string = infile.read()
+
+    # Clean the list by removing commas and spaces.
     character_list = pokemon_string.split(", ")
+
+    # Close the file and return the cleaned list.
     infile.close()
     return character_list
 
+# Define a function to play the game.
+def choose_word(pokemon_list):
 
-def choose_word(my_list):
-    pokemon_list = read_file("pokemon.txt")
-
+    #
     random_pokemon = random.choice(pokemon_list)
     return random_pokemon
-
-
 
 def display_word(random_pokemon, guessed_letters):
     turn = 0
@@ -26,8 +29,6 @@ def display_word(random_pokemon, guessed_letters):
     current_state = (len(random_pokemon) * "_")
     guesses = 0
     print("\nWelcome to GUESS THE POKEMON!")
-
-
 
     while current_state != random_pokemon:
         print()
@@ -52,23 +53,12 @@ def display_word(random_pokemon, guessed_letters):
             if guess == random_pokemon[index]:
                     current_state_list[index] = guess
 
-
-
             index += 1
         current_state = "".join(current_state_list)
         guesses += 1
 
-
     print("Well done, you guessed the Pokemon!")
     print(f"It took you {guesses} guesses!")
-
-
-
-
-
-
-
-
 
 def play_game():
     pokemon_list = read_file("pokemon.txt")
